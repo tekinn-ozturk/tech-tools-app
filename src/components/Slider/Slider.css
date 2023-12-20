@@ -1,0 +1,13 @@
+.container {
+    max-width: 80%; /* Slider'ın maksimum genişliğini sınırlayın */
+    margin: auto; /* Slider'ı merkeze alın */
+    /* İsteğe bağlı olarak, üst ve alt boşluk ekleyebilirsiniz */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .card img {
+    max-height: 500px; /* Resimlerin maksimum yüksekliğini sınırlayın */
+    width: 100%; /* Resim genişliğini koruyun */
+  }
