@@ -6,6 +6,7 @@ export const ApiContext = createContext();
 
 export const ApiContextProvider = ({children}) => {
     const [popProducts, setPopProducts] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
     
     
     useEffect(() => {
@@ -23,11 +24,24 @@ export const ApiContextProvider = ({children}) => {
         getPopProducts();                             
     },[])
 
+    useEffect(()=>{
+      const getAllProducts = async ()=>{
+        try{
+          const response = await axios.get("https://dummyjson.com/products");
+          setAllProducts(response.data.products);
+        }
+        catch(error){
+          console.log(error);
+        }
+      }
+      getAllProducts();
+    },[])
+
    
 
   
   return (
-    <ApiContext.Provider value={{popProducts}}>
+    <ApiContext.Provider value={{popProducts, allProducts}}>
       {children}
     </ApiContext.Provider>
   )
