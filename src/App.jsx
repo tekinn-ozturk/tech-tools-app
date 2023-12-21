@@ -5,6 +5,7 @@ import Home from "./components/Homepage/Home.jsx";
 import ProductList from "./components/ProductList/ProductList.jsx"
 import { ApiContextProvider } from "./context/ApiContext.jsx"
 import { BasketContextProvider } from './context/BasketContext.jsx';
+import Basket from './components/Basket/Basket.jsx';
 
 
 
@@ -22,7 +23,7 @@ function App() {
      <Routes>
      <Route path="/" element={<Home/>} />
      <Route path="/Product" element={<ProductList/>} />
-     <Route path="/Basket"  />
+     <Route path="/Basket" element={<Basket/>} />
 
      </Routes>
      </BasketContextProvider>
