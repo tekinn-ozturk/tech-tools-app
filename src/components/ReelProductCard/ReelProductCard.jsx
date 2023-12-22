@@ -13,6 +13,7 @@ const ReelProductCard = ({product}) => {
         <img className="product-image" src={firstImageUrl} alt="" />
         <h3>{product.title}</h3>
         <p>{product.description}</p>
+        <h4>{product.price} TL</h4>
         <button className="btn btn-primary" onClick={()=>addToBasket(product,findBasketItem)} > {findBasketItem? 'Sepetten Çıkar': 'Sepete Ekle'}</button>
     </div>
   )
